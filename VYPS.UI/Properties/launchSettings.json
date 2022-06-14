@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "VYPS.UI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "VYPS.UI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

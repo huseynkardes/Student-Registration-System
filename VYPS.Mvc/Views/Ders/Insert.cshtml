@@ -1,0 +1,25 @@
+﻿@using VYPS.Mvc.Models
+@model Ders
+
+@{
+    ViewBag.Title = "Insert";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align:center">Ders Ekle</h2>
+
+@using (Html.BeginForm("Insert", "Ders", FormMethod.Post))
+{
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">Ders ad</label>
+        @Html.TextBoxFor(x => x.dadi, new { @class = "form-control" })
+    </div>
+
+
+    <button class="btn btn-success">
+        Kaydet
+    </button>
+
+}
+

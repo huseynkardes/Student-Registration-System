@@ -1,0 +1,43 @@
+﻿@using  VYPS.Mvc.Models
+@model IEnumerable<Ders>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2 style="text-align:center;">Ders listesi</h2>
+<br />
+
+<div class="list">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Ders Kod</th>
+                <th scope="col">Ders Ad</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Ders item in Model)
+            {
+                <tr>
+                    <th scope="row">@item.dkod</th>
+                    <td>@item.dadi</td>
+                    <td>@Html.ActionLink("Sil", "Delete", new { id = item.dkod }, new { @class = "btn btn-danger" })</td>
+                    <td>@Html.ActionLink("Güncelle", "Update", new { id = item.dkod }, new { @class = "btn btn-warning" })</td>
+                </tr>
+            }
+
+
+        </tbody>
+    </table>
+    <br>
+    <div>
+        @Html.ActionLink("Yeni Ders Ekle", "Insert", new { @class = "btn btn-success" })
+    </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,47 @@
+﻿@using VYPS.Mvc.Models
+@model Ogrenci
+@{
+    ViewBag.Title = "Insert";
+}
+
+<h2 style="text-align:center">Ogrenci Ekle</h2>
+
+@using (Html.BeginForm("Insert", "Ogrenci", FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="exampleInputEmail1">Öğrenci no</label>
+        @Html.TextBoxFor(x => x.no, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Öğrenci ad</label>
+        @Html.TextBoxFor(x => x.ad, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Öğrenci soyad</label>
+        @Html.TextBoxFor(x => x.soyadi, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Öğrenci bolum Id</label>
+        @Html.TextBoxFor(x => x.bolumid, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Öğrenci doğum tarihi</label>
+        @Html.TextBoxFor(x => x.dtar, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Öğrenci adres</label>
+        @Html.TextBoxFor(x => x.adres, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Öğrenci tc</label>
+        @Html.TextBoxFor(x => x.tcno, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Öğrenci cinsiyet</label>
+        @Html.CheckBoxFor(x => x.cinsiyet, new { @class = "form-control" })
+    </div>
+    <button class="btn btn-success">
+        Kaydet
+    </button>
+
+}

@@ -1,0 +1,25 @@
+﻿@using VYPS.Mvc.Models
+@model Ders
+
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align:center">Ders Güncelle</h2>
+<br />
+@using (Html.BeginForm("Update", "Ders", FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="exampleInputEmail1">ders no</label>
+        @Html.TextBoxFor(x => x.dkod, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">ders ad</label>
+        @Html.TextBoxFor(x => x.dadi, new { @class = "form-control" })
+    </div>
+    <button class="btn btn-success">
+        Kaydet
+    </button>
+
+}
